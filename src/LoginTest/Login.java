@@ -58,14 +58,7 @@ public class Login {
 						System.getProperty("user.dir") + "\\test resources\\WebDrivers\\chromedriver.exe");
 				driver = new ChromeDriver();
 
-			} else if (config.getProperty("browser").equals("IE")) {
-
-				System.setProperty("webdriver.ie.driver",
-						System.getProperty("user.dir") + "\\test resources\\WebDriver\\IEDriverServer.exe");
-				driver = new InternetExplorerDriver();
-
-			}
-
+			} 
 			driver.get(config.getProperty("baseURL"));
 
 			driver.manage().window().maximize();
